@@ -1,0 +1,122 @@
+@import 'variables';
+
+
+// Reset 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// General Styling 
+body {
+    font-family: $ff;
+    font-weight: $fw-regular;
+    font-size: 1rem;
+    background-color: $clr-neutral-gray;
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    padding: 2rem;
+    line-height: 1.4;
+}
+
+// Utility class
+.pyx {padding: 1.5rem 2rem;}
+
+%btn {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: $clr-secondary-byellow;
+    color: $clr-primary-white;
+    border-radius: .3rem;
+    padding: 0.75rem;
+}
+
+.card {
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: .3rem;
+}
+
+#community {
+    background: $clr-primary-white;
+    header {
+        h1{
+            color: $clr-primary-cyan;
+            font-weight: $fw-bold;
+            margin-bottom: 1.5rem;
+            font-size: 1.35rem;
+        }
+    }
+    .sub-text {
+        color: $clr-secondary-byellow;
+        font-weight: $fw-bold;
+        margin-bottom: .8rem;
+    }
+    .description-text {
+        font-weight: $fw-regular;
+        color: $clr-neutral-gblue;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+#m-subscription {
+    background: $clr-primary-cyan;
+    header {
+        h2{
+            color: $clr-primary-white;
+            font-weight: $fw-regular;
+            font-size: 1.2rem;
+        }
+    }
+    .price {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        color: $clr-primary-white;
+        align-items: center;
+        margin-top: 1rem ;
+        .current-price {
+            font-weight: $fw-bold;
+            font-size: 2rem;
+        }
+        .monthly {
+            color: $clr-neutral-gray;
+            font-weight: $fw-light;
+        }
+    }
+    .sub-text{
+        color: $clr-primary-white;
+        font-weight: $fw-lightz;
+    }
+    
+    .btn {
+        @extend %btn;
+        font-weight: $fw-bold;
+        margin-top: 1.5rem;
+    }
+}
+
+#why-us {
+    background-color: $clr-light-cyan;
+    header {
+        h2 {
+            color: $clr-primary-white;
+            font-weight: $fw-regular;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    p {
+        color: $clr-neutral-gray;
+        font-weight: $fw-light;
+        font-size: .9rem;
+    }
+}
+
+@import 'media';
